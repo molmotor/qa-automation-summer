@@ -2,6 +2,8 @@
 
 A summer project where I learned QA and test automation from scratch, using a real public demo site as the target. Covers manual testing, browser automation with Selenium, and API testing — the three main things a junior QA automation role usually asks for.
 
+![Tests](https://github.com/molmotor/qa-automation-summer/actions/workflows/tests.yml/badge.svg)
+
 ## What's tested
 
 Target app: the login page on [the-internet.herokuapp.com](https://the-internet.herokuapp.com/login), plus the [reqres.in](https://reqres.in) REST API.
@@ -44,7 +46,7 @@ Python, pytest, Selenium, Postman, requests, git/GitHub
 
 ```bash
 git clone <this-repo-url>
-cd qasummer
+cd qa-automation-summer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
