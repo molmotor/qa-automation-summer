@@ -1,12 +1,14 @@
+import os
 import requests
 
 url = "https://reqres.in/api/users/2"
 
+api_key = os.environ.get("REQRES_API_KEY")
 custom_headers = {
     "User-Agent": "MyCustomBot/1.0",
-    "x-api-key": "free_user_3HyDhCNxR6pfUt5YSXDe1GqhNFI"
-
+    "x-api-key": api_key
 }
+
 def test_get_user():
     response = requests.get(url, headers=custom_headers)
     assert response.status_code == 200
