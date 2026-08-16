@@ -4,7 +4,11 @@ from pages.login_page import LoginPage
 
 @pytest.fixture
 def driver():
-    d = webdriver.Chrome()
+    from selenium.webdriver.chrome.options import Options
+
+    options = Options()
+    options.add_argument("--headless")
+    d = webdriver.Chrome(options=options)
     yield d
     d.quit()
 
